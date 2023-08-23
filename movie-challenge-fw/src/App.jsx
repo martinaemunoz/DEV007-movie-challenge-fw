@@ -23,7 +23,10 @@ function App() {
         <div key={movie.id} className="movie-container">
           <div className="movie-image-container">
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="movie-image"/>
+          <div className="title-details-container">
           <p className="movie-title">{movie.title}</p>
+          <p className="movie-detail">See details</p>
+          </div>
           </div>
         </div>
       ))}
