@@ -17,6 +17,11 @@ function Home() {
     getMovies();
   }, []);
 
+  const extractYearFromReleaseDate = (releaseDate) => {
+    const date = new Date(releaseDate);
+    return date.getFullYear();
+  };
+
   return (
     <div>
       <h1 className="main-title">Now Streaming</h1>
@@ -25,7 +30,7 @@ function Home() {
           <div className="movie-image-container">
             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="movie-image" />
             <div className="title-details-container">
-              <p className="movie-title">{movie.title}</p>
+              <p className="movie-title">{movie.title} ({extractYearFromReleaseDate(movie.release_date)})</p>
               <p className="movie-detail">See details</p>
             </div>
           </div>

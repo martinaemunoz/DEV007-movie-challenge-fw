@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import Header from '../components/header/header';
 import Home from '../pages/home';
 import './AppRouter.css'
-//import AllMovies from '../pages/AllMovies';
+import AllMovies from '../pages/allmovies';
 
 
 function AppRouter() {
@@ -13,8 +13,8 @@ function AppRouter() {
         <Routes>
             <Route path='/' element= {<Home />}/>
             <Route path='/home' element= {<Home />}/>
-            {/*<Route path='/AllMovies' element= {<AllMovies/>}/>
-            <Route path='/About' element= {<About />}/>*/}
+            <Route path='/allmovies' element= {<AllMovies/>}/>
+            {/*<Route path='/About' element= {<About />}/>*/}
         </Routes>
         </div>
     );
