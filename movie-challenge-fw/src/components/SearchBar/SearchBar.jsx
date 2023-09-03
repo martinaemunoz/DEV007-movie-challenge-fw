@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './SearchBar.css'
+import { FiSearch } from "react-icons/fi";
 
-function SearchBar({ onSearch, apiKey }) {
+const apiKey = 'db946c84f7b0a4d24fbc4e2ec032838e';
+
+function SearchBar({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = () => {
@@ -21,7 +24,7 @@ function SearchBar({ onSearch, apiKey }) {
         onChange={(e) => setSearchQuery(e.target.value)}
         className="search-input" />
       <button className="search-button" onClick={handleSearch}>
-        <i className="fa fa-search"></i>
+      <FiSearch className="icon-search" />
       </button>
     </div>
   );
@@ -29,7 +32,6 @@ function SearchBar({ onSearch, apiKey }) {
 
 SearchBar.propTypes = {
     onSearch: PropTypes.func.isRequired,
-    apiKey: PropTypes.string.isRequired,
   };
 
 export default SearchBar;

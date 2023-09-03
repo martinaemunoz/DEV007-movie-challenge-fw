@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Home.css'
 import SearchBar from '../components/SearchBar/SearchBar';
+import GenreDropdown from '../components/GenreDropdown/GenreDropdown';
 
 const apiKey = 'db946c84f7b0a4d24fbc4e2ec032838e';
 
@@ -54,6 +55,7 @@ function AllMovies() {
     <div>
     <h1 className="main-title">All Movies</h1>
     <SearchBar onSearch={handleSearch} apiKey={apiKey}/>
+    <GenreDropdown /> 
     {movies.map((movie, index) => (
       <div key={`${movie.id}-${index}`} className="movie-container">
         <div className="movie-image-container">
