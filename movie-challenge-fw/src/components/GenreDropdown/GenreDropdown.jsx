@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaCaretDown } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import './GenreDropdown.css';
@@ -8,6 +8,7 @@ const GenreDropdown = ({ onSelectGenre }) => {
   const [selectedGenre, setSelectedGenre] = useState('All Movies');
 
   const genres = [
+    { id: 'all', name: 'All Movies' },
     { id: 28, name: 'Action' },
     { id: 12, name: 'Adventure' },
     { id: 16, name: 'Animation' },
@@ -16,15 +17,22 @@ const GenreDropdown = ({ onSelectGenre }) => {
     { id: 18, name: 'Drama' },
   ];
 
+  useEffect(() => {
+    // Call onSelectGenre(null) only when the component mounts
+    if (selectedGenre === 'All Movies') {
+      onSelectGenre(null); // Pass null for "All Movies"
+    }
+  }, []);
+
   const toggleDropdown = () => {
     console.log('Toggle dropdown');
     setIsOpen(!isOpen);
   };
 
   const handleGenreSelect = (genre) => {
-    setSelectedGenre(genre.name);
+    setSelectedGenre(genre.name); // Set the selected genre name
     setIsOpen(false);
-    onSelectGenre(genre);
+    onSelectGenre(genre.id === 'all' ? null : genre.id); // Always pass the genre id
   };
 
   return (

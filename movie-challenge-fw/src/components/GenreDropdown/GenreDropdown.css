@@ -52,26 +52,27 @@
 .genre-menu {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 20px 0 0 0;
     position: absolute;
     top: 100%;
-    left: 37%;
+    left: 36%;
     background-color: #7b7b7b;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-height: 300px;
     overflow-y: auto;
     display: none;
-    width: 26%;
+    width: 28%;
     z-index: 1000;
 }
+
   
 .genre-menu.open {
     display: block;
 }
   
 .genre-item {
-    padding: 10px 20px;
+    padding: 0 20px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
