@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiChevronDown } from 'react-icons/fi';
+import { FaCaretDown } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import './GenreDropdown.css';
 
@@ -17,6 +17,7 @@ const GenreDropdown = ({ onSelectGenre }) => {
   ];
 
   const toggleDropdown = () => {
+    console.log('Toggle dropdown');
     setIsOpen(!isOpen);
   };
 
@@ -31,7 +32,7 @@ const GenreDropdown = ({ onSelectGenre }) => {
       <h2 className="browse-title">Browse by genre:</h2>
       <div className="dropdown-toggle" onClick={toggleDropdown}>
         <span className="dropdown-label">{selectedGenre}</span>
-        <FiChevronDown className={`dropdown-icon ${isOpen ? 'open' : ''}`} />
+        <FaCaretDown className={`dropdown-icon ${isOpen ? 'open' : ''}`} />
       </div>
       <ul className={`genre-menu ${isOpen ? 'open' : ''}`}>
         {genres.map((genre) => (

@@ -5,7 +5,7 @@ import './NavigationBar.css';
 function NavigationBar({ isOpen, onClose }) {
   return (
     <div className={`navigation-bar ${isOpen ? 'open' : ''}`}>
-      <button className="close-button" onClick={onClose}>X</button>
+      <button className="close-button" onClick={onClose}>x</button>
       <ul>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/allmovies">All Movies</Link></li>

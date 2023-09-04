@@ -4,9 +4,11 @@
 
 .genre-dropdown {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-family: 'League Spartan', sans-serif;
-    margin: 20px 0;
+    margin: 2% 0 5% 0;
+    position: relative;
 }
 
 .browse-title {
@@ -22,7 +24,7 @@
 .dropdown-toggle {
     background-color: #4e4e4e;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -39,6 +41,7 @@
   
 .dropdown-icon {
     font-size: 1.5rem;
+    margin-left: 25px;
     transition: transform 0.3s ease;
 }
   
@@ -51,16 +54,16 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    top: calc(100% + 10px); 
     top: 100%;
-    left: 0;
+    left: 37%;
     background-color: #7b7b7b;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
     display: none;
-    width: 100%;
+    width: 26%;
+    z-index: 1000;
 }
   
 .genre-menu.open {

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import './Home.css'
 import SearchBar from '../components/SearchBar/SearchBar';
 import GenreDropdown from '../components/GenreDropdown/GenreDropdown';
 
@@ -9,6 +8,7 @@ function AllMovies() {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState('');
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -16,6 +16,8 @@ function AllMovies() {
         let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${currentPage}`;
         if (searchQuery) {
           url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}&page=${currentPage}`;
+        } else if (selectedGenre) { // If a genre is selected, fetch movies by genre
+          url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${selectedGenre}&page=${currentPage}`;
         }
 
         const response = await fetch(url);
@@ -37,13 +39,21 @@ function AllMovies() {
     };
 
     fetchMovies();
-  }, [currentPage, searchQuery]);
+  }, [currentPage, searchQuery, selectedGenre]);
 
   const handleSearch = (query) => {
     // Clear existing movies when starting a new search
     setCurrentPage(1);
     // Update the searchQuery state when the search button is clicked
     setSearchQuery(query);
+    // Clear selected genre when starting a new search
+    setSelectedGenre('');
+  };
+
+  const handleSelectGenre = (genre) => {
+    setCurrentPage(1);
+    setSelectedGenre(genre.id); // Store the selected genre ID
+    setSearchQuery(''); // Clear search query when selecting a genre
   };
 
   const extractYearFromReleaseDate = (releaseDate) => {
@@ -55,7 +65,7 @@ function AllMovies() {
     <div>
     <h1 className="main-title">All Movies</h1>
     <SearchBar onSearch={handleSearch} apiKey={apiKey}/>
-    <GenreDropdown /> 
+    <GenreDropdown onSelectGenre={handleSelectGenre} /> 
     {movies.map((movie, index) => (
       <div key={`${movie.id}-${index}`} className="movie-container">
         <div className="movie-image-container">

@@ -3,35 +3,33 @@
 
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #4E4E4E;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 0 20% 2% 20%;
-
-  }
+  display: flex;
+  align-items: center;
+  background-color: #4E4E4E;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 0 20%;
+}
   
-  .search-input {
-    flex: 1;
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 5px;
-    font-family: 'League Spartan', sans-serif;
-  }
+.search-input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 5px;
+  font-family: 'League Spartan', sans-serif;
+}
   
-  .search-button {
-    background-color: #418C1E;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 8px 9px 5px 9px;
-    margin-left: 10px;
-  }
+.search-button {
+  background-color: #418C1E;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 9px 5px 8px;
+  margin-left: 10px;
+}
   
