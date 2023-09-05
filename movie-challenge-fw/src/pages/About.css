@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&display=swap');
+
+.about-container {
+    color: white; /* Text color */
+    padding: 25px 40px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.about-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.about-copyright {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-links {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+
+.about-icon {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+
+.about-icon:hover {
+    color: #0077b5; /* LinkedIn blue color */
+    transition: color 0.3s ease-in-out;
+}
+  
+  

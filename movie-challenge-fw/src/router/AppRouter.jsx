@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
-//import About from '../pages/About';
+import About from '../pages/About';
 import Header from '../components/header/header';
 import Home from '../pages/home';
 import './AppRouter.css'
@@ -14,7 +14,7 @@ function AppRouter() {
             <Route path='/' element= {<Home />}/>
             <Route path='/home' element= {<Home />}/>
             <Route path='/allmovies' element= {<AllMovies/>}/>
-            {/*<Route path='/About' element= {<About />}/>*/}
+            <Route path='/about' element= {<About />}/>
         </Routes>
         </div>
     );
