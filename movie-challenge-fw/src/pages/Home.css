@@ -39,7 +39,7 @@ body {
 
 .title-details-container {
     position: inherit;
-    bottom: 82.5px;
+    bottom: 100px;
     left: 75.5px;
     width: 62%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -47,18 +47,20 @@ body {
     border-bottom-right-radius: 10px;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease-in-out;
-    padding: 20px;
+    padding: 28.7px 20px;
 }
 
 .movie-title {
+    z-index: 1;
     position: absolute;
     bottom: 15px;
     left: 0px;
     width: 100%;
     color: #FFFFFF;
     font-family: 'League Spartan', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
+    line-height: 20px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -68,7 +70,7 @@ body {
 
 .movie-detail {
     position: relative;
-    top: 25px;
+    top: 30px;
     text-decoration: underline;
     font-family: 'League Spartan', sans-serif;
     font-size: 15px;
