@@ -32,4 +32,17 @@
   padding: 8px 9px 5px 8px;
   margin-left: 10px;
 }
-  
+
+@media (max-width: 376px) {
+
+  .search-button {
+    background-color: #418C1E;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 9px 5px 8px;
+    margin-left: -35px;
+  }
+}

@@ -36,3 +36,20 @@
     font-family: 'League Spartan', sans-serif;
     -webkit-text-stroke: 0.5px white;
 }
+
+@media (max-width: 376px) {
+      
+    .bar {
+        background-color: #418C1E;
+        height: 3.5px;
+        width: 90%;
+    
+    }
+      
+    .title {
+        margin: 0 105px 0 auto;
+        font-size: 35px;
+        font-family: 'League Spartan', sans-serif;
+        -webkit-text-stroke: 0.5px white;
+    }
+}

@@ -92,8 +92,8 @@ body {
     .title-details-container {
         position: inherit;
         bottom: 82.5px;
-        left: 53.5px;
-        width: 59%;
+        left: 56px;
+        width: 59.5%;
         background-color: rgba(0, 0, 0, 0.8);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -104,13 +104,14 @@ body {
 
     .movie-title {
         position: absolute;
-        bottom: 12px;
+        bottom: 18px;
         left: 0px;
         width: 100%;
         color: #FFFFFF;
         font-family: 'League Spartan', sans-serif;
         font-size: 20px;
         text-align: center;
+        line-height: 15px;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
@@ -120,7 +121,7 @@ body {
 
     .movie-detail {
         position: relative;
-        top: 25px;
+        top: 20px;
         text-decoration: underline;
         font-family: 'League Spartan', sans-serif;
         font-size: 15px;
